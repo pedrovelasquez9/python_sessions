@@ -30,3 +30,18 @@ numeros = [1, 2, 3]
 dobles = map(lambda x: x*2, numeros)
 mi_lista = list(dobles)
 print(mi_lista)
+
+#comprehension en listas
+dobles = [x*2 for x in range(1,10) if x]
+print(dobles)
+
+#iterables
+iterable = range(1, 3)
+iterator = iterable.__iter__()
+print(iterator.__next__())
+print(iterator.__next__())
+
+#leer archivo
+with open('cities.txt') as cities:
+    for line in cities:
+        print(line)
